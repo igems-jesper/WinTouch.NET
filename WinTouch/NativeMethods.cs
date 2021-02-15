@@ -34,13 +34,13 @@ namespace Alteridem.WinTouch
     {
         #region Private Delegates
 
-        [UnmanagedFunctionPointer( CallingConvention.Cdecl )]
+        [UnmanagedFunctionPointer( CallingConvention.Winapi )]
         private delegate bool GetGestureInfoPtr( IntPtr gestureInfoHandle, ref GestureInfo pGestureInfo );
 
-        [UnmanagedFunctionPointer( CallingConvention.Cdecl )]
+        [UnmanagedFunctionPointer( CallingConvention.Winapi )]
         private delegate bool CloseGestureInfoHandlePtr( IntPtr gestureInfoHandle );
 
-        [UnmanagedFunctionPointer( CallingConvention.Cdecl )]
+        [UnmanagedFunctionPointer( CallingConvention.Winapi )]
         private delegate bool SetGestureConfigPtr( IntPtr hwnd, uint reserved, uint ids, GestureConfig[] configs, uint size );
 
         private static readonly GetGestureInfoPtr _pGetGestureInfoPtr;
